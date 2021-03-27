@@ -12,10 +12,13 @@ let obj1 = {
 };
 let obj2 = {};
 
-deepCopy(obj2, obj1);
+//-----------------------------------------------------------------------
 
+deepCopy(obj2, obj1);
 obj1.marks.riazi1 = 3;
 console.log(obj1, obj2);
+
+//-----------------------------------------------------------------------
 
 function deepCopy(target, object) {
     for (let key in object) {
