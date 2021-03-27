@@ -5,7 +5,7 @@ let obj1 = {
     marks: {
         riazi1: {
             firstTerm: 12,
-            secondTerm: 13
+            secondTerm: 13,
         },
         fizik1: 12,
     },
@@ -19,9 +19,8 @@ console.log(obj1, obj2);
 
 function deepCopy(target, object) {
     for (let key in object) {
-        // console.log(key, object[key]);
         if (typeof object[key] === "object" && !Array.isArray(object[key])) {
-            target[key] = {}
+            target[key] = {};
             deepCopy(target[key], object[key]);
         } else {
             target[key] = object[key];
